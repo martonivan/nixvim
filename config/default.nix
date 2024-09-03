@@ -14,6 +14,7 @@ in {
     ./ufo.nix
     ./noice.nix
     ./suda.nix
+    ./leap.nix
 
     ./which-key.nix
     ./arrow.nix
