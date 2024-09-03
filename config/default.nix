@@ -31,6 +31,7 @@ in {
     ./cmp.nix
     ./copilot.nix
     ./session.nix
+    ./surround.nix
 
     ./image.nix
     ./otter.nix
