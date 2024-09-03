@@ -63,6 +63,7 @@ in {
     smartindent = true;
     tabstop = 2;
     softtabstop = 2;
+    backspace = "2";
 
     ignorecase = true;
     smartcase = true;
@@ -84,13 +85,15 @@ in {
 
     undofile = true;
 
-    wrap = false;
+    wrap = true;
+    showbreak = "> ";
 
     virtualedit = "block";
     winminwidth = 5;
     fileencoding = "utf-8";
     list = true;
     smoothscroll = true;
+    scrolloff = 8;
     fillchars = { eob = " "; };
 
     #interval for writing swap file to disk, also used by gitsigns
@@ -101,5 +104,8 @@ in {
   extraConfigLua = ''
     vim.opt.whichwrap:append("<>[]hl")
     vim.opt.listchars:append("space:·")
+    vim.opt.listchars:append("eol:↵")
+    vim.opt.listchars:append("tab:⇥ ")
+    vim.opt.listchars:append("trail:•")
   '';
 }
