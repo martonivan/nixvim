@@ -33,6 +33,7 @@ in {
     ./copilot.nix
     ./session.nix
     ./surround.nix
+    ./unimpaired.nix
 
     ./image.nix
     ./otter.nix

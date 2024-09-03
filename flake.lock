@@ -423,6 +423,7 @@
         "suda": "suda",
         "tokyodark": "tokyodark",
         "ts-comments": "ts-comments",
+        "unimpaired": "unimpaired",
         "windows": "windows",
         "windows-a": "windows-a",
         "windows-mc": "windows-mc"
@@ -525,6 +526,22 @@
       "original": {
         "owner": "folke",
         "repo": "ts-comments.nvim",
+        "type": "github"
+      }
+    },
+    "unimpaired": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668992903,
+        "narHash": "sha256-KUNmvI5+2yZuPTmtUiRPtkjzMxRaDh5gALsLz5VIaao=",
+        "owner": "tpope",
+        "repo": "vim-unimpaired",
+        "rev": "6d44a6dc2ec34607c41ec78acf81657248580bf1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tpope",
+        "repo": "vim-unimpaired",
         "type": "github"
       }
     },

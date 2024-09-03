@@ -94,6 +94,10 @@
       url = "github:arminveres/md-pdf.nvim";
       flake = false;
     };
+    unimpaired = {
+      url = "github:tpope/vim-unimpaired";
+      flake = false;
+    };
 
     nvim-md = {
       url = "github:ixru/nvim-markdown";
