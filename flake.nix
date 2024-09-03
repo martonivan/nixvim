@@ -86,6 +86,10 @@
       url = "github:Shatur/neovim-session-manager";
       flake = false;
     };
+    suda = {
+      url = "github:lambdalisue/suda.vim";
+      flake = false;
+    };
     md-pdf = {
       url = "github:arminveres/md-pdf.nvim";
       flake = false;

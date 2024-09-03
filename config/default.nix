@@ -13,6 +13,7 @@ in {
     ./lualine.nix
     ./ufo.nix
     ./noice.nix
+    ./suda.nix
 
     ./which-key.nix
     ./arrow.nix

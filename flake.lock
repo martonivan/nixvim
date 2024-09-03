@@ -420,6 +420,7 @@
         "nvim-hl-md": "nvim-hl-md",
         "nvim-md": "nvim-md",
         "session-manager": "session-manager",
+        "suda": "suda",
         "tokyodark": "tokyodark",
         "ts-comments": "ts-comments",
         "windows": "windows",
@@ -440,6 +441,22 @@
       "original": {
         "owner": "Shatur",
         "repo": "neovim-session-manager",
+        "type": "github"
+      }
+    },
+    "suda": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1714052487,
+        "narHash": "sha256-cT1ihAeVCywYrJV96zp9ku/ksvn4LP4bKdR6s6FZkIk=",
+        "owner": "lambdalisue",
+        "repo": "suda.vim",
+        "rev": "b97fab52f9cdeabe2bbb5eb98d82356899f30829",
+        "type": "github"
+      },
+      "original": {
+        "owner": "lambdalisue",
+        "repo": "suda.vim",
         "type": "github"
       }
     },
