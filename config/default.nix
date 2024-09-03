@@ -5,6 +5,7 @@ in {
   imports = [
     ./mappings.nix
     ./autocmd.nix
+    ./usercommand.nix
     ./general.nix
 
     ./tokyodark.nix
