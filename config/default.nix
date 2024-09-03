@@ -8,7 +8,7 @@ in {
     ./usercommand.nix
     ./general.nix
 
-    ./tokyodark.nix
+    ./tokyonight.nix
     ./bufferline.nix
     ./lualine.nix
     ./ufo.nix
