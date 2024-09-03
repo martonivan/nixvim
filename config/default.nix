@@ -15,6 +15,7 @@ in {
     ./noice.nix
 
     ./which-key.nix
+    ./arrow.nix
 
     ./telescope.nix
     ./treesitter.nix
