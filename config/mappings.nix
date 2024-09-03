@@ -3,6 +3,7 @@ let
   inherit (mkKey) mkKeymap mkKeymap' mkKeymapWithOpts;
   insert = [
     (mkKeymap "i" "jk" "<esc>" "Normal Mode")
+    (mkKeymap "i" "jj" "<esc>" "Normal Mode")
     (mkKeymap "i" "<c-s>" "<esc>:w<cr>" "Save file")
     (mkKeymap "i" "<a-j>" "<esc>:m .+1<cr>==gi" "Move Line Down")
     (mkKeymap "i" "<a-k>" "<esc>:m .-2<cr>==gi" "Move Line Up")
@@ -25,6 +26,9 @@ let
 
     (mkKeymap "n" "<a-j>" "<cmd>m .+1<cr>==" "Move line Down")
     (mkKeymap "n" "<a-k>" "<cmd>m .-2<cr>==" "Move line up")
+
+    (mkKeymap "n" "<c-d>" "<c-d>zz" "Page down")
+    (mkKeymap "n" "<c-u>" "<c-u>zz" "Page up")
 
     (mkKeymap "n" "<s-h>" "<esc>:bprev<cr>" "Buffer Previous")
     (mkKeymap "n" "<s-l>" "<esc>:bnext<cr>" "Buffer Next")
@@ -82,6 +86,7 @@ let
     (mkKeymap "n" "n" "nzzzv" "Move to center")
     (mkKeymap "n" "N" "Nzzzv" "Moving to center")
     (mkKeymap "n" "x" ''"_x'' "Register x")
+    (mkKeymap "n" "Q" "@qj" "Replay the Q register")
   ];
   v = [
 
@@ -105,6 +110,7 @@ let
     (mkKeymap "v" "<leader>D" ''gg"+dG'' "Register D")
     (mkKeymap "v" "<leader>x" ''"+x'' "Register x")
     (mkKeymap "v" "<leader>X" ''"+'' "Register X")
+    (mkKeymap "v" "Q" ":norm @q<cr>" "Replay the Q register")
 
   ];
   xv = [
