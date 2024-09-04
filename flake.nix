@@ -42,7 +42,13 @@
 
           packages = {
             # Lets you run `nix run .` to start nixvim
-            default = nvim;
+            default = pkgs.runCommand "nvim" {
+              nativeBuildInputs = [ pkgs.makeWrapper ];
+            } ''
+                mkdir -p $out/bin
+                makeWrapper "${nvim}/bin/nvim" $out/bin/nvim \
+                --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.ansible-lint ]}
+              '';
           };
         };
     };
