@@ -47,7 +47,7 @@
             } ''
                 mkdir -p $out/bin
                 makeWrapper "${nvim}/bin/nvim" $out/bin/nvim \
-                --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.ansible-lint ]}
+                --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.ansible-lint pkgs.lazygit ]}
               '';
           };
         };

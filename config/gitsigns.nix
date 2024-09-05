@@ -32,7 +32,7 @@ in {
       "Next Hunk")
     (mkKeymap "n" "<leader>gk" "<cmd>lua require 'gitsigns'.prev_hunk()<cr>"
       "Prev Hunk")
-    (mkKeymap "n" "<leader>gl" "<cmd>lua require 'gitsigns'.blame_line()<cr>"
+    (mkKeymap "n" "<leader>ga" "<cmd>lua require 'gitsigns'.blame_line()<cr>"
       "Blame")
     (mkKeymap "n" "<leader>gp" "<cmd>lua require 'gitsigns'.preview_hunk()<cr>"
       "Preview Hunk")

@@ -23,6 +23,7 @@ in {
     ./treesitter.nix
     ./nvimtree.nix
     ./gitsigns.nix
+    ./lazygit.nix
 
     ./dashboard.nix
     ./lsp.nix
