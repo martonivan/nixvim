@@ -2,6 +2,37 @@
 {
   autoCmd = [
     {
+      desc = "Set filetype for ansible files";
+      event = [ "BufRead" "BufNewFile" ];
+      pattern = [
+        "*/host_vars/*.yml"
+        "*/host_vars/*.yaml"
+        "*/group_vars/*.yml"
+        "*/group_vars/*.yaml"
+        "*/group_vars/*/*.yml"
+        "*/group_vars/*/*.yaml"
+        "*/playbook*.yml"
+        "*/playbook*.yaml"
+        "*/playbooks/*.yml"
+        "*/playbooks/*.yaml"
+        "*/roles/*/tasks/*.yml"
+        "*/roles/*/tasks/*.yaml"
+        "*/roles/*/handlers/*.yml"
+        "*/roles/*/handlers/*.yaml"
+        "*/tasks/*.yml"
+        "*/tasks/*.yaml"
+        "*.playbook"
+      ];
+      callback = {
+        __raw = ''
+          function()
+            vim.bo.filetype = "yaml.ansible"
+          end
+        '';
+      };
+    }
+
+    {
       desc = "Highlight on yank";
       event = [ "TextYankPost" ];
       callback = {
