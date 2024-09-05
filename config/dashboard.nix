@@ -20,6 +20,12 @@
         ];
         shortcut = [
           {
+            desc = "${icons.ui.File} New file";
+            group = "string";
+            key = "e";
+            action = "enew";
+          }
+          {
             desc = "${icons.ui.History} Recent Files";
             group = "String";
             key = "r";
