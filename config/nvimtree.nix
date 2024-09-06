@@ -147,6 +147,7 @@ in
   ];
   keymaps = [
     (mkKeymap "n" "<leader>e" "<cmd>NvimTreeToggle<CR>" "Toggle NvimTree")
+    (mkKeymap "n" "<leader>E" "<cmd>NvimTreeFindFileToggle<CR>" "Toggle NvimTree (FindFile)")
   ];
 
   extraConfigLua = /*lua*/''
