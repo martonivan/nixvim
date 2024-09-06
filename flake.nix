@@ -113,6 +113,10 @@
       url = "github:yaocccc/nvim-hl-mdcodeblock.lua";
       flake = false;
     };
+    substitute = {
+      url = "github:gbprod/substitute.nvim";
+      flake = false;
+    };
 
     windows = {
       url = "github:anuvyklack/windows.nvim";

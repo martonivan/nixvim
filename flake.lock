@@ -420,6 +420,7 @@
         "nvim-hl-md": "nvim-hl-md",
         "nvim-md": "nvim-md",
         "session-manager": "session-manager",
+        "substitute": "substitute",
         "suda": "suda",
         "tokyodark": "tokyodark",
         "ts-comments": "ts-comments",
@@ -442,6 +443,22 @@
       "original": {
         "owner": "Shatur",
         "repo": "neovim-session-manager",
+        "type": "github"
+      }
+    },
+    "substitute": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720243128,
+        "narHash": "sha256-JFWkkOjUaKmyQF1agh5NzIqdukFZNnROVkXxCocX7wQ=",
+        "owner": "gbprod",
+        "repo": "substitute.nvim",
+        "rev": "97f49d16f8eea7967d41db4f657dd63af53eeba1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gbprod",
+        "repo": "substitute.nvim",
         "type": "github"
       }
     },

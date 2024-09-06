@@ -10,6 +10,7 @@ let
     (mkPkgs "color-picker" inputs.color-picker)
     (mkPkgs "moveline" inputs.moveline)
     (mkPkgs "md-pdf" inputs.md-pdf)
+    (mkPkgs "substitute" inputs.substitute)
 
     (mkPkgs "windows" inputs.windows)
     (mkPkgs "windows-mc" inputs.windows-mc)
@@ -26,9 +27,15 @@ let
       (mkKeymap' "v" "<a-j>" ":lua require('moveline').block_down")
     ];
     colorpicker =
-      [ (mkKeymap "n" "<leader>up" "<cmd>PickColor<CR>" "Color Picker") ];
+      [ (mkKeymap "n" "<leader>up" "<cmd>Substitute PickColor<CR>" "Color Picker") ];
     windows =
       [ (mkKeymap "n" "<c-w>=" "<cmd>WindowsEqualize<CR>" "Equalize windows") ];
+    substitute = [
+      (mkKeymap "n" "<a-s>" ":lua require('substitute').operator()<cr>" "Substitute with motion")
+      (mkKeymap "n" "<a-s>s" ":lua require('substitute').line()<cr>" "Substitute line")
+      (mkKeymap "n" "<a-S>" ":lua require('substitute').eol()<cr>" "Substitute to end of line")
+      (mkKeymap "x" "<a-s>" ":lua require('substitute').visual()<cr>" "Substitute in visual mode")
+    ];
   };
 
 in {
@@ -123,6 +130,6 @@ in {
     (mkKeymap "n" "<leader>bm"
       ":lua require('buffer_manager.ui').toggle_quick_menu()<cr>"
       "Toggle buffer manager")
-  ] ++ maps.moveline ++ maps.colorpicker ++ maps.windows;
+  ] ++ maps.moveline ++ maps.colorpicker ++ maps.windows ++ maps.substitute;
 
 }
