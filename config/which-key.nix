@@ -4,6 +4,38 @@
     settings = {
       spec = [
         {
+          __unkeyed1 = "<leader>b";
+          group = "Buffer...";
+        }
+        {
+          __unkeyed1 = "<leader>g";
+          group = "Git...";
+        }
+        {
+          __unkeyed1 = "<leader>l";
+          group = "LSP...";
+        }
+        {
+          __unkeyed1 = "<leader>s";
+          group = "Search...";
+        }
+        {
+          __unkeyed1 = "<leader>S";
+          group = "Session...";
+        }
+        {
+          __unkeyed1 = "<leader>t";
+          group = "Tab...";
+        }
+          {
+          __unkeyed1 = "<leader>u";
+          group = "Utility...";
+        }
+        {
+          __unkeyed1 = "<leader>v";
+          group = "Split...";
+        }
+        {
           __unkeyed1 = "<leader>f";
           group = "File operations";
         }
