@@ -57,15 +57,14 @@
                   c = cmp.mapping.close(),
                 }),
 
-                -- Making Ctrl-Enter accept the top entry instead of Enter
-                ["<c-CR>"] = cmp.mapping.confirm({
+                ["<C-c>"] = cmp.mapping({
+                  i = cmp.mapping.close(),
+                  c = cmp.mapping.close(),
+                }),
+
+                ["<CR>"] = cmp.mapping.confirm({
                   behavior = cmp.ConfirmBehavior.Insert,
                   select = true,
-                }),
-                ["<CR>"] = cmp.mapping({
-                  i = function(fallback)
-                    fallback()
-                  end,
                 }),
 
                 ["<c-h>"] = cmp.mapping(function(fallback)
