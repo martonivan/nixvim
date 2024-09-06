@@ -46,8 +46,10 @@
               nativeBuildInputs = [ pkgs.makeWrapper ];
             } ''
                 mkdir -p $out/bin
-                makeWrapper "${nvim}/bin/nvim" $out/bin/nvim \
-                --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.ansible-lint pkgs.lazygit ]}
+                for bin in ${nvim}/bin/*; do
+                  makeWrapper "$bin" "$out/bin/$(basename $bin)" \
+                  --prefix PATH : ${pkgs.lib.makeBinPath [ pkgs.ansible-lint pkgs.lazygit ]}
+                done
               '';
           };
         };
