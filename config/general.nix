@@ -114,6 +114,7 @@ in {
           '';
       };
     };
+    oil.enable = true;
   };
   keymaps = [
     (mkKeymap "n" "<leader>st" "<cmd>TodoTelescope<cr>" "Search Todo")
