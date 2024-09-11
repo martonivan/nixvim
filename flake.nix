@@ -19,6 +19,14 @@
           pkgs = import inputs.nixpkgs {
             config.allowUnfree = true;
             inherit system;
+            overlays = [
+              (_self: super: {
+                ansible-lint = super.ansible-lint.overridePythonAttrs (oldAttrs: {
+                  # Add python312Packages.rpds-py to the dependencies
+                  makeWrapperArgs = oldAttrs.makeWrapperArgs or [] ++ [ "--set PYTHONPATH ''" ];
+                });
+              })
+            ];
           };
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
