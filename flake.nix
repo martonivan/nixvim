@@ -4,10 +4,20 @@
   outputs =
     # NOTE: Not use flake-parts or understand it good enough to use everywhere
     { nixvim, flake-parts, ... }@inputs:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+    flake-parts.lib.mkFlake { inherit inputs; } ({moduleWithSystem, ...}: {
       systems =
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
 
+      flake.homeManagerModules.default = moduleWithSystem (
+        { config,... }: {
+          home.sessionVariables = {
+            "EDITOR" = "nvim";
+          };
+
+          home.packages = [
+            config.packages.default
+          ];
+        });
       perSystem = { system, ... }:
         let
           opts = {
@@ -61,7 +71,7 @@
               '';
           };
         };
-    };
+    });
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
