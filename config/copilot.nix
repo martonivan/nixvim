@@ -5,6 +5,8 @@ in{
   plugins.copilot-lua = {
     enable = true;
     filetypes=  {
+      "*" = true;
+      text = false;
       markdown = true;
     };
     suggestion = {
@@ -12,6 +14,15 @@ in{
       autoTrigger = true;
     };
   };
+  # plugins.copilot-vim = {
+  #   enable = true;
+  #   settings = {
+  #     filetypes = {
+  #       "*" = true;
+  #       text = false;
+  #     };
+  #   };
+  # };
   keymaps = [
     (mkKeymap "n" "<leader>ucc" {
       __raw = #lua
