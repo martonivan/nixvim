@@ -1,10 +1,10 @@
 {
   plugins = {
-    # lsp-format.enable = true;
+    lsp-format.enable = true;
     none-ls = {
       enable = true;
       settings.update_in_insert = true;
-      # enableLspFormat = true;
+      enableLspFormat = true;
     };
   };
 }

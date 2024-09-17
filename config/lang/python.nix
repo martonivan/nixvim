@@ -7,5 +7,11 @@
         ruff-lsp.enable = true;
       };
     };
+    none-ls = {
+      sources.diagnostics.trail_space = {
+        enable = true;
+        settings = { extra_filetypes = [ "python" ]; };
+      };
+    };
   };
 }

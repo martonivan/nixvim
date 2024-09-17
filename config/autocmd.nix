@@ -1,5 +1,4 @@
-{opts, ...}:
-{
+{ opts, ... }: {
   autoCmd = [
     {
       desc = "Set filetype for ansible files";
@@ -75,7 +74,8 @@
     }
 
     {
-      desc = "Auto create dir when save file, in case some intermediate directory is missing";
+      desc =
+        "Auto create dir when save file, in case some intermediate directory is missing";
       event = [ "BufWritePre" ];
       callback = {
         __raw = ''
@@ -120,6 +120,20 @@
       pattern = [ "*.*" ];
       command = "silent! loadview";
     }
-
+    {
+      desc = "Restart LSP whenever filetype changed";
+      event = [ "FileType" ];
+      pattern = [ "*" ];
+      callback = {
+        __raw = ''
+          function(event)
+            if vim.bo.buftype ~= "" or vim.fn.filereadable(vim.fn.expand("%")) ~= 1 then
+              return
+            end
+            vim.cmd("LspRestart")
+          end
+        '';
+      };
+    }
   ];
 }
