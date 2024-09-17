@@ -36,6 +36,7 @@ in {
     ./session.nix
     ./surround.nix
     ./unimpaired.nix
+    ./rest.nix
 
     ./image.nix
     ./otter.nix
