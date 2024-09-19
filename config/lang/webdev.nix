@@ -51,6 +51,9 @@
                   "graphql",
                   "handlebars",
                 },
+                disabled_filetypes = {
+                  "yaml.ansible",
+                },
               }
             '';
         };
