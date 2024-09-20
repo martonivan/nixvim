@@ -26,15 +26,20 @@ let
       (mkKeymap' "v" "<a-k>" ":lua require('moveline').block_up")
       (mkKeymap' "v" "<a-j>" ":lua require('moveline').block_down")
     ];
-    colorpicker =
-      [ (mkKeymap "n" "<leader>up" "<cmd>Substitute PickColor<CR>" "Color Picker") ];
+    colorpicker = [
+      (mkKeymap "n" "<leader>up" "<cmd>Substitute PickColor<CR>" "Color Picker")
+    ];
     windows =
       [ (mkKeymap "n" "<c-w>=" "<cmd>WindowsEqualize<CR>" "Equalize windows") ];
     substitute = [
-      (mkKeymap "n" "<a-s>" ":lua require('substitute').operator()<cr>" "Substitute with motion")
-      (mkKeymap "n" "<a-s>s" ":lua require('substitute').line()<cr>" "Substitute line")
-      (mkKeymap "n" "<a-S>" ":lua require('substitute').eol()<cr>" "Substitute to end of line")
-      (mkKeymap "x" "<a-s>" ":lua require('substitute').visual()<cr>" "Substitute in visual mode")
+      (mkKeymap "n" "<a-s>" ":lua require('substitute').operator()<cr>"
+        "Substitute with motion")
+      (mkKeymap "n" "<a-s>s" ":lua require('substitute').line()<cr>"
+        "Substitute line")
+      (mkKeymap "n" "<a-S>" ":lua require('substitute').eol()<cr>"
+        "Substitute to end of line")
+      (mkKeymap "x" "<a-s>" ":lua require('substitute').visual()<cr>"
+        "Substitute in visual mode")
     ];
   };
 
@@ -114,7 +119,6 @@ in {
           '';
       };
     };
-    oil.enable = true;
   };
   keymaps = [
     (mkKeymap "n" "<leader>st" "<cmd>TodoTelescope<cr>" "Search Todo")
