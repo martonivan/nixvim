@@ -56,6 +56,11 @@ in {
       set "windows"
       set "nvim-surround"
       set "md-pdf"
+
+      require('substitute').setup({ highlight_substituted_text = {
+        enabled = true,
+        timer = 500,
+      }})
     '';
 
   extraPlugins = nPlugins ++ ePlugins;
