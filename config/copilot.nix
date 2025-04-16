@@ -1,18 +1,19 @@
 { mkKey, ... }:
 let inherit (mkKey) mkKeymap;
 in {
-  plugins.copilot-lua = {
-    enable = true;
-    filetypes = {
-      "*" = true;
-      text = false;
-      markdown = true;
-    };
-    suggestion = {
-      enabled = true;
-      autoTrigger = true;
-    };
-  };
+  plugins.copilot-chat = { enable = true; };
+  # plugins.copilot-lua = {
+  #   enable = false;
+  #   filetypes = {
+  #     "*" = true;
+  #     text = false;
+  #     markdown = true;
+  #   };
+  #   suggestion = {
+  #     enabled = true;
+  #     autoTrigger = true;
+  #   };
+  # };
   # plugins.copilot-vim = {
   #   enable = true;
   #   settings = {
