@@ -2,27 +2,27 @@
 let inherit (mkKey) mkKeymap;
 in {
   plugins.copilot-chat = { enable = true; };
-  # plugins.copilot-lua = {
-  #   enable = false;
-  #   filetypes = {
-  #     "*" = true;
-  #     text = false;
-  #     markdown = true;
-  #   };
-  #   suggestion = {
-  #     enabled = true;
-  #     autoTrigger = true;
-  #   };
-  # };
-  # plugins.copilot-vim = {
-  #   enable = true;
-  #   settings = {
-  #     filetypes = {
-  #       "*" = true;
-  #       text = false;
-  #     };
-  #   };
-  # };
+  plugins.copilot-lua = {
+    enable = false;
+    filetypes = {
+      "*" = true;
+      text = false;
+      markdown = true;
+    };
+    suggestion = {
+      enabled = true;
+      autoTrigger = true;
+    };
+  };
+  plugins.copilot-vim = {
+    enable = true;
+    settings = {
+      filetypes = {
+        "*" = true;
+        text = false;
+      };
+    };
+  };
   keymaps = [
     (mkKeymap "n" "<leader>ucc" {
       __raw = # lua
