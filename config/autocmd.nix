@@ -32,6 +32,30 @@
     }
 
     {
+      desc = "Set filetype to Python when shebang contains python";
+      event = [ "BufRead" "BufNewFile" ];
+      pattern = "*";
+      callback.__raw = ''
+        function(args)
+          -- only act on files without an extension
+          local name = vim.api.nvim_buf_get_name(args.buf)
+          if name == "" or name:match("/$") then return end
+          if name:match("%.[^/%.]+$") then return end
+
+          local firstLines = vim.api.nvim_buf_get_lines(args.buf, 0, 2, false)
+          local first = firstLines[1] or ""
+          local second = firstLines[2] or ""
+          -- match: #!... python / python3 / python3.10, with or without /usr/bin/env
+          if first:match("^#!.*[/ ]python[%d%.]*%s*$") or first:match("^#!.*env%s+python[%d%.]*%s*$") or
+             first == "#!/usr/bin/env nix-shell" and second:match("^#!.*-i python[%d%.]*.*$")
+            then
+            vim.bo[args.buf].filetype = "python"
+          end
+        end
+      '';
+    }
+
+    {
       desc = "Highlight on yank";
       event = [ "TextYankPost" ];
       callback = {
